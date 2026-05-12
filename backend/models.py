@@ -18,16 +18,19 @@ class Prediction(Base):
 
     id= Column(Integer, primary_key=True, index=True)
     user_id= Column(Integer, ForeignKey("users.id"))
+
     attendance= Column(Float)
-    avg_marks = Column(Float)
+    average_marks = Column(Float)
     study_hours = Column(Float)
-    assignments_completion = Column(Float)
+    assignments_completed = Column(Float)
     sleep_hours = Column(Float)
     stress_level = Column(Float)
     deadlines_missed = Column(Float)
-    consistency_score = Column(Float)
     screen_time = Column(Float)
+
     risk_level = Column(String)
+    gpa = Column(Float)
+    
     created_at = Column(String, default= str(datetime.utcnow()))
 
     user= relationship("User")

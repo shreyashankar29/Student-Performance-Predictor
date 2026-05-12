@@ -15,7 +15,7 @@ function Dashboard() {
       style={{
         marginLeft: "240px",
         padding: "20px",
-        height: "100vh",
+        minheight: "100vh",
         overflowY: "auto",
         }}
         >
